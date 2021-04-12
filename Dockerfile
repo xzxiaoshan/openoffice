@@ -11,6 +11,7 @@ WORKDIR /opt/
 #filebeat.inputs.enabled 默认为false，切记改为 true 否则坑
 #Array of hosts to connect to. hosts是string数组类型，支持多个kafka实力地址(此处不是配置zookeeper地址)
 RUN set -x && \
+  yum -y install wget && \
   wget -o openoffice.tar.gz https://udomain.dl.sourceforge.net/project/openofficeorg.mirror/4.1.9/binaries/zh-CN/Apache_OpenOffice_4.1.9_Linux_x86-64_install-rpm_zh-CN.tar.gz && \
   yum -y install libXext && \
   yum -y install fontconfig && \
