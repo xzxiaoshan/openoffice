@@ -13,7 +13,7 @@ RUN set -x && \
   rm -rf openoffice.tar.gz && \
   cd /opt/ &&\
   echo "#!/bin/bash" > entrypoint.sh && \
-  echo "exec /opt/openoffice4/program/soffice -headless -accept=\"socket,host=0.0.0.0,port=8100;urp;\" -nofirststartwizard" >> entrypoint.sh && \
+  echo "exec /opt/openoffice4/program/soffice --headless --accept=\"socket,host=0.0.0.0,port=8100;urp;\" --nofirststartwizard" >> entrypoint.sh && \
   chmod +x entrypoint.sh
 
 EXPOSE 8100
