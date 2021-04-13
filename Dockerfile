@@ -5,7 +5,7 @@ MAINTAINER 365384722@qq.com
 WORKDIR /opt/
 
 RUN set -x && \
-  wget -O openoffice.tar.gz http://192.168.1.81/C%3A/Users/Admin_Pxs/Desktop/Apache_OpenOffice_4.1.9_Linux_x86-64_install-rpm_zh-CN.tar.gz && \
+  wget -O openoffice.tar.gz https://udomain.dl.sourceforge.net/project/openofficeorg.mirror/4.1.9/binaries/zh-CN/Apache_OpenOffice_4.1.9_Linux_x86-64_install-rpm_zh-CN.tar.gz && \
   tar -xzvf openoffice.tar.gz && \
   cd zh-CN/RPMS/ && \
   rpm -ivh *.rpm && \
