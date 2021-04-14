@@ -10,8 +10,9 @@ RUN set -x && \
   cd zh-CN/RPMS/ && \
   rpm -ivh *.rpm && \
   rpm -ivh desktop-integration/*redhat*.rpm && \
+  cd /opt/ && \
   rm -rf openoffice.tar.gz && \
-  cd /opt/ &&\
+  rm -rf zh-CN/RPMS && \
   echo "#!/bin/bash" > entrypoint.sh && \
   echo "exec /opt/openoffice4/program/soffice -headless -accept=\"socket,host=0.0.0.0,port=8100;urp;\" -nofirststartwizard" >> entrypoint.sh && \
   chmod +x entrypoint.sh
