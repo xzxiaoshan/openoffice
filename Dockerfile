@@ -4,7 +4,10 @@ MAINTAINER 365384722@qq.com
 
 WORKDIR /opt/
 
+COPY ./fonts/* /usr/share/fonts/
+
 RUN set -x && \
+  mkfontscale && mkfontdir && fc-cache -fv && fc-list && \
   wget -O openoffice.tar.gz https://udomain.dl.sourceforge.net/project/openofficeorg.mirror/4.1.9/binaries/zh-CN/Apache_OpenOffice_4.1.9_Linux_x86-64_install-rpm_zh-CN.tar.gz && \
   tar -xzvf openoffice.tar.gz && \
   cd zh-CN/RPMS/ && \
